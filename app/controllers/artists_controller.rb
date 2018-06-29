@@ -1,5 +1,4 @@
 class ArtistsController < ApplicationController
-<<<<<<< HEAD
 
   def show
     @artist = Artist.find(params[:id])
@@ -23,8 +22,4 @@ class ArtistsController < ApplicationController
     @artist = Artist.update(params.require(:artist).permit(:bio))
     redirect_to song_path(@artist)
   end
-
-=======
-  has_many :songs
->>>>>>> ef99eb6127a2f12d6b2fdbbea0196c88aa9b61a5
 end

@@ -1,5 +1,4 @@
 class GenresController < ApplicationController
-<<<<<<< HEAD
 
   def show
     @genre = Genre.find(params[:id])
