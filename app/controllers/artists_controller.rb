@@ -10,7 +10,7 @@ class ArtistsController < ApplicationController
 
   def create
     @artist = Artist.create(artist_params)
-    redirect_to song_path(@artist)
+    redirect_to artist_path(@artist)
   end
 
   def edit
@@ -20,7 +20,7 @@ class ArtistsController < ApplicationController
   def update
     @artist = Artist.find(params[:id])
     @artist.update(artist_params)
-    redirect_to song_path(@artist)
+    redirect_to artist_path(@artist)
   end
 
   private
