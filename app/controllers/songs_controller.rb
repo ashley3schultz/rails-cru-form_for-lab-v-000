@@ -9,7 +9,7 @@ class SongsController < ApplicationController
     @artist = Artist.find(@song.artist_id)
     @genre = Genre.find(@song.genre_id)
   end
-  
+
   def show
     @song = Song.find(params[:id])
   end
