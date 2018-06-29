@@ -15,7 +15,7 @@ class SongsController < ApplicationController
   end
 
   def create
-    @song = Song.create(post_params(:name))
+    @song = Song.create(song_params(:name))
     redirect_to song_path(@song)
   end
 
@@ -25,7 +25,7 @@ class SongsController < ApplicationController
 
   def update
     @song = Song.find(params[:id])
-    @song = Song.update(post_params(:name))
+    @song = Song.update(song_params(:name))
     redirect_to song_path(@song)
   end
 
